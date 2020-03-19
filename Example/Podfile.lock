@@ -1,0 +1,16 @@
+PODS:
+  - LwImagePage (0.1.0)
+
+DEPENDENCIES:
+  - LwImagePage (from `../`)
+
+EXTERNAL SOURCES:
+  LwImagePage:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  LwImagePage: dba24f75a45496126cd3fc0933564a335c73d507
+
+PODFILE CHECKSUM: b877ec408fb01875797e5480d9881f95d3584788
+
+COCOAPODS: 1.8.4
