@@ -72,22 +72,14 @@ open class LwPageView: UIView,UIScrollViewDelegate {
             reuseImageView = imageView0
             currentImageView = imageView1
         }
-        
-        let index = Int(scrollView.contentOffset.x / scrollView.frame.width)
-        currentImageView.image = imageDatas[index]
         if currentImageView.frame.origin.x > scrollView.contentOffset.x
         {
             //scroller向左划
             reuseImageView.frame = CGRect.init(x: currentImageView.frame.origin.x - reuseImageView.frame.size.width, y: reuseImageView.frame.origin.y, width: reuseImageView.frame.size.width, height: reuseImageView.frame.size.height)
-            if index - 1 > 0 {
-                reuseImageView.image = imageDatas[index - 1]
-            }
-            
         }else
         {
             ////scroller向右划
             reuseImageView.frame = CGRect.init(x: currentImageView.frame.origin.x + reuseImageView.frame.size.width, y: reuseImageView.frame.origin.y, width: reuseImageView.frame.size.width, height: reuseImageView.frame.size.height)
-            reuseImageView.image = imageDatas[index + 1]
         }
     }
 }
